@@ -2,6 +2,7 @@ const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const story = require('./utils/story');
 const swagger = require('../swagger.json');
+const logger = require('./utils/logger');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.get('/location/:locationName', (req, res) => {
   try {
     res.status(200).json(story.describeLocation(locationName));
   } catch (error) {
+    logger.error(error);
     res.status(404).json(error.message);
   }
 });
@@ -24,6 +26,7 @@ app.post('/location/:locationName', (req, res) => {
   try {
     res.status(200).json(story.resolveChoice(locationName, choice));
   } catch (error) {
+    logger.error(error);
     res.status(404).json(error.message);
   }
 });
