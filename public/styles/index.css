@@ -2,7 +2,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background-color: beige;
+  background-color: lightslategrey;
   /* padding: 50px; */
 }
 
