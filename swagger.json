@@ -28,7 +28,8 @@
             "name": "locationName",
             "in": "path",
             "type": "string",
-            "default": "start"
+            "default": "start",
+            "required": true
           }
         ],
         "responses": {
@@ -48,6 +49,45 @@
                     "type": "string",
                     "example": ["go left", "go right"]
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "choose an action at a location",
+        "parameters": [
+          {
+            "name": "locationName",
+            "in": "path",
+            "type": "string",
+            "default": "start"
+          },
+          {
+            "name": "requestBody",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "choice": {
+                  "type": "string",
+                  "example": "Continue"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "goTo": {
+                  "type": "string",
+                  "description": "GET this path to continue the story",
+                  "example": "/location/skeleton%20room"
                 }
               }
             }
