@@ -62,7 +62,8 @@
             "name": "locationName",
             "in": "path",
             "type": "string",
-            "default": "start"
+            "default": "start",
+            "required": true
           },
           {
             "name": "requestBody",
