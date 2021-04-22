@@ -1,0 +1,216 @@
+[
+    {
+        "title": "start",
+        "text": "Welcome adventurer. Your adventure begins, as many do, in Ye Olde Inn.",
+        "choices": [
+            {
+                "label": "Continue",
+                "target": "inn"
+            }
+        ]
+    },
+    {
+        "title": "inn",
+        "text": "This is a peaceful, happy inn with plentiful drink, tasty food, and friendly staff.",
+        "choices": [
+            {
+                "label": "Stay",
+                "target": "inn"
+            },
+            {
+                "label": "Go!",
+                "target": "cave entrance"
+            }
+        ]
+    },
+    {
+        "title": "cave entrance",
+        "text": "There is a dark cave in the hillside before you.",
+        "choices": [
+            {
+                "label": "Enter",
+                "target": "entry"
+            },
+            {
+                "label": "Run",
+                "target": "inn"
+            }
+        ]
+    },
+    {
+        "title": "entry",
+        "text": "You are in a dark, narrow tunnel.",
+        "choices": [
+            {
+                "label": "Next",
+                "target": "side opening"
+            }
+        ]
+    },
+    {
+        "title": "side opening",
+        "text": "You are in a small room, one tunnel leads ahead and another to the side. Do you continue on or explore the side tunnel?",
+        "choices": [
+            {
+                "label": "Continue",
+                "target": "skeleton room"
+            },
+            {
+                "label": "Side T.",
+                "target": "treasure room"
+            }
+        ]
+    },
+    {
+        "title": "treasure room",
+        "text": "There is a pile of treasure here. Congratulations!",
+        "choices": [
+            {
+                "label": "Next",
+                "target": "maze 1"
+            }
+        ]
+    },
+    {
+        "title": "skeleton room",
+        "text": "There is a skeleton on the floor. From the items around it, it seems to be that of an unfortunate adventurer.",
+        "choices": [
+            {
+                "label": "Next",
+                "target": "maze 2"
+            }
+        ]
+    },
+    {
+        "title": "maze 1",
+        "text": "There are passages to the left and right.",
+        "choices": [
+            {
+                "label": "Left",
+                "target": "maze 3"
+            },
+            {
+                "label": "Right",
+                "target": "maze 2"
+            }
+        ]
+    },
+    {
+        "title": "maze 2",
+        "text": "There are passages to the left and right.",
+        "choices": [
+            {
+                "label": "Left",
+                "target": "maze 1"
+            },
+            {
+                "label": "Right",
+                "target": "maze 4"
+            }
+        ]
+    },
+    {
+        "title": "maze 3",
+        "text": "There are passages to the left and right.",
+        "choices": [
+            {
+                "label": "Left",
+                "target": "maze 5"
+            },
+            {
+                "label": "Right",
+                "target": "maze 2"
+            }
+        ]
+    },
+    {
+        "title": "maze 4",
+        "text": "There are passages to the left and right.",
+        "choices": [
+            {
+                "label": "Left",
+                "target": "maze 1"
+            },
+            {
+                "label": "Right",
+                "target": "maze 6"
+            }
+        ]
+    },
+    {
+        "title": "maze 5",
+        "text": "There are passages to the left and right.",
+        "choices": [
+            {
+                "label": "Left",
+                "target": "maze 4"
+            },
+            {
+                "label": "Right",
+                "target": "creaking"
+            }
+        ]
+    },
+    {
+        "title": "maze 6",
+        "text": "There are passages to the left and right.",
+        "choices": [
+            {
+                "label": "Left",
+                "target": "creaking"
+            },
+            {
+                "label": "Right",
+                "target": "maze 3"
+            }
+        ]
+    },
+    {
+        "title": "creaking",
+        "text": "You hear an ominuous creaking from around the corner",
+        "choices": [
+            {
+                "label": "Cont.",
+                "target": "bridge room 1"
+            },
+            {
+                "label": "Go back",
+                "target": "inn"
+            }
+        ]
+    },
+    {
+        "title": "bridge room 1",
+        "text": "There is a creaking, rickity wooded bridge leading across a gaping chasm.",
+        "choices": [
+            {
+                "label": "Cont.",
+                "target": "bridge room 2"
+            }
+        ]
+    },
+    {
+        "title": "bridge room 2",
+        "text": "At the other end is a large treasure chest. There is also a short tunnel with daylight at the end.",
+        "choices": [
+            {
+                "label": "Treasure!",
+                "target": "die"
+            },
+            {
+                "label": "Leave",
+                "target": "inn"
+            }
+        ]
+    },
+    {
+        "title": "die",
+        "text": "The bridge gives way and you fall to a painful death.",
+        "choices": [
+            {
+                "label": "Next",
+                "target": "inn"
+            }
+        ]
+    }
+]
