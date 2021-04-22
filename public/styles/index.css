@@ -3,7 +3,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   background-color: beige;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 hr {
@@ -17,8 +17,8 @@ hr {
 
 
 .book-cover {
-  width: 900px;
-  height: 1500px;
+  width: 60vh;
+  height: 95vh;
   border: 3px solid black;
   display: flex;
   flex-direction: column;
@@ -26,42 +26,44 @@ hr {
   align-items: center;
   background-color: whitesmoke;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .brand-bar {
-  height: 40px;
-  width: 700px;
+  height: 30px;
+  width: 50vh;
   background-color: red;
   color: white;
   border-radius: 25px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-weight: bolder;
-  margin-bottom: 50px;
+  margin-bottom: 1vh;
   font-stretch: expanded;
 }
 
 .tag-text {
-  font-weight: bold;
+  font-weight: lighter;
+  font-stretch: extra-expanded;
 }
 
 .title-text {
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: red;
   font-weight: bolder;
 }
 
 .image-box {
-  width: 700px;
-  height: 900px;
-  border: 20px solid red;
-  margin-top: 50px;
-  border-radius: 150px 150px 0px 0px;
+  width: 70%;
+  height: 60%;
+  border: 2vh solid red;
+  margin-top: 1vh;
+  border-radius: 10vh 10vh 0px 0px;
   box-shadow:
-  inset 0 0 0 40px darkred;
+  inset 0 0 0 30px darkred;
   position: relative;
   display: flex;
   justify-content: center;
@@ -71,11 +73,11 @@ hr {
 
 .cover-image {
   margin: auto;
-  width: 900px;
+  width: 70vh;
 }
 
 
 div .tag-text {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
