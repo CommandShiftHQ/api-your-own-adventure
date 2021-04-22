@@ -1,0 +1,59 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Your Own Adventure",
+    "description": "A classic style 'choose your own adventure', played over HTTP.",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/location/{locationName}": {
+      "get": {
+        "summary": "get a description of a location",
+        "parameters": [
+          {
+            "name": "locationName",
+            "in": "path",
+            "type": "string",
+            "default": "start"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "description of the location and events that take place",
+                  "example": "There is a fork in the path ahead."
+                },
+                "choices": {
+                  "type": "array",
+                  "description": "the choices available at this location",
+                  "items": {
+                    "type": "string",
+                    "example": ["go left", "go right"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
