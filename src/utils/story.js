@@ -1,13 +1,19 @@
 const STORY = require('../resources/story.json');
 
-const formatLocation = (locationObject) => ({
-  text: locationObject.text,
-  choices: locationObject.choices.map((choice) => choice.label),
+const formatLocation = (location) => ({
+  text: location.text,
+  choices: location.choices.map((choice) => choice.label),
 });
 
-const getLocation = (locationName) => STORY.find((s) => s.title === locationName);
+const getLocation = (locationName) => {
+  const location = STORY.find((s) => s.title === locationName);
+  if (!location) {
+    throw new Error(`location '${locationName}' does not exist`);
+  }
+  return location;
+};
 
-const location = (locationName) => formatLocation(getLocation(locationName));
+const describeLocation = (locationName) => formatLocation(getLocation(locationName));
 
 const resolveChoice = (locationName, choiceName) => {
   const currentLocation = getLocation(locationName);
@@ -22,6 +28,6 @@ const resolveChoice = (locationName, choiceName) => {
 module.exports = {
   formatLocation,
   getLocation,
-  location,
+  describeLocation,
   resolveChoice,
 };
