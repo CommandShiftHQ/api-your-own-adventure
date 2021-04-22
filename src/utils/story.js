@@ -16,8 +16,8 @@ const getLocation = (locationName) => {
 const describeLocation = (locationName) => formatLocation(getLocation(locationName));
 
 const resolveChoice = (locationName, choiceName) => {
-  const currentLocation = getLocation(locationName);
-  const choice = currentLocation.choices.find((c) => c.label === choiceName);
+  const location = getLocation(locationName);
+  const choice = location.choices.find((c) => c.label.toLowerCase() === choiceName.toLowerCase());
   if (!choice) {
     return { message: `You can't '${choiceName}' here!` };
   }
