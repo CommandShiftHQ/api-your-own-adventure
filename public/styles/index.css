@@ -1,7 +1,9 @@
 body {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  align-items: center;
   background-color: lightslategrey;
   /* padding: 50px; */
 }
@@ -74,6 +76,21 @@ hr {
 .cover-image {
   margin: auto;
   width: 70vh;
+}
+
+.content-box {
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: whitesmoke;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 50px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 50px;
 }
 
 
