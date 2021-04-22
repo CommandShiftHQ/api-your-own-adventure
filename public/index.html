@@ -47,6 +47,53 @@
     <p>
       You can find details of the interface <a href="https://learning.postman.com/docs/getting-started/navigating-postman/">here</a>. We also recommend you read the next page <a href="https://learning.postman.com/docs/getting-started/sending-the-first-request/">sending your first request</a>.
     </p>
+    <h2>Challenge</h2>
+    <p>
+      We will be using this [api](https://github.com/MCRcodes/api-your-own-adventure) to get used to sending <code>GET</code> and <code>POST</code> requests. The aim is to explore the cave and find the treasure.
+    </p>
+    <p>
+      To do this, you will need to send a <code>GET</code> request to receive a description of your current location and available choices, then send a <code>POST</code> request with a choice to the same url. You will then receive the url for the next part of the story.
+    </p>
+    <p>
+      When you're ready, send a <code>GET</code> request to <code>https://api-you-own-adventure.herokuapp.com/location/start</code>. You should receive this <code>JSON</code> response:
+    </p>
+    <code>
+      {<br>
+        "text":"Welcome adventurer. Your adventure begins, as many do, in Ye Olde Inn.",<br>
+        "choices":["Continue"]<br>
+      }
+    </code> 
+    <img src="images/Screenshot 2021-04-22 at 21.19.17.png" alt="">
+    <h2>Sending your first <code>POST</code> request</h2>
+    <p>
+      Now we have the first part of the story, we need to build a <code>POST</code> request to move the story forward. To do this, you will need to:
+    </p>
+    <ol>
+      <li>
+        Set the request type next to the url bar as <code>POST</code>, the url will remain the same.
+      </li>
+      <li>
+        Click on the <code>body</code> tab, select the <code>raw</code> option. A dropdown menu will appear to the right, it will be set to <code>Text</code> by default. Set it to <code>JSON</code>.
+      </li>
+      <li>
+        We now need to write the request body, you may have guessed that it needs to be in <code>JSON</code>, it should look something like this:
+        <br>
+        <br>
+        <code>
+          {<br>
+            "choice": "YOUR ANSWER HERE"<br>
+          }
+        </code>
+      </li>
+    </ol>
+    <img src="images/Screenshot 2021-04-22 at 21.36.04.png" alt="">
+      <p>
+        Once that's in place you should be good to send your first <code>POST</code> request.If it worked, you'll get a response with a <code>goTo</code> property. This will contain the path of the next location. Hit that with a <code>GET</code> request to find out what's in the next location.
+      </p>
+      <img src="images/Screenshot 2021-04-22 at 21.37.21.png" alt="">
+      <p>
+        Make a <code>GET</code> request to <code>/location/inn</code> to get the next part of the story. You now have all the skills you need to explore the cave an find the treasure!
+      </p>
   </div>
 </body>
 

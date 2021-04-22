@@ -93,8 +93,16 @@ hr {
   padding: 50px;
 }
 
+img {
+  width: 70vw;
+  margin: 50px
+}
 
 div .tag-text {
   text-align: center;
   font-size: 1.2rem;
+}
+
+li {
+  margin: 20px;
 }
