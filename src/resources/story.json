@@ -18,7 +18,7 @@
                 "target": "inn"
             },
             {
-                "label": "Go!",
+                "label": "Go",
                 "target": "cave entrance"
             }
         ]
@@ -56,8 +56,8 @@
                 "target": "skeleton room"
             },
             {
-                "label": "Side T.",
-                "target": "treasure room"
+                "label": "Side Tunnel",
+                "target": "creaking"
             }
         ]
     },
@@ -66,10 +66,11 @@
         "text": "There is a pile of treasure here. Congratulations!",
         "choices": [
             {
-                "label": "Next",
-                "target": "maze 1"
+                "label": "Go Home",
+                "target": "inn"
             }
-        ]
+        ],
+        "treasure": "VGhlIHJlYWwgdHJlYXN1cmUgd2FzIHRoZSBmcmllbmRzIHdlIG1hZGUgYWxvbmcgdGhlIHdheSE="
     },
     {
         "title": "skeleton room",
@@ -147,7 +148,7 @@
             },
             {
                 "label": "Right",
-                "target": "creaking"
+                "target": "treasure room"
             }
         ]
     },
@@ -161,16 +162,16 @@
             },
             {
                 "label": "Right",
-                "target": "maze 3"
+                "target": "treasure room"
             }
         ]
     },
     {
         "title": "creaking",
-        "text": "You hear an ominuous creaking from around the corner",
+        "text": "You hear an ominous creaking from around the corner",
         "choices": [
             {
-                "label": "Cont.",
+                "label": "Continue",
                 "target": "bridge room 1"
             },
             {
@@ -181,10 +182,10 @@
     },
     {
         "title": "bridge room 1",
-        "text": "There is a creaking, rickity wooded bridge leading across a gaping chasm.",
+        "text": "There is a creaking, rickety wooded bridge leading across a gaping chasm.",
         "choices": [
             {
-                "label": "Cont.",
+                "label": "Continue",
                 "target": "bridge room 2"
             }
         ]
