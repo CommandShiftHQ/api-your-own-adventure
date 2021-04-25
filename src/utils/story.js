@@ -1,9 +1,15 @@
 const STORY = require('../resources/story.json');
 
-const formatLocation = (location) => ({
-  text: location.text,
-  choices: location.choices.map((choice) => choice.label),
-});
+const formatLocation = (location) => {
+  const formattedLocation = {
+    text: location.text,
+    choices: location.choices.map((choice) => choice.label),
+  };
+  if (location.treasure) {
+    formattedLocation.treasure = location.treasure;
+  }
+  return formattedLocation;
+};
 
 const getLocation = (locationName) => {
   const location = STORY.find((s) => s.title === locationName);
