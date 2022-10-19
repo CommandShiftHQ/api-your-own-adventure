@@ -21,38 +21,50 @@
     </div>
     <hr>
     <span class="title-text">INTRODUCTION TO</span>
-    <span class="title-text">WEB APPS</span>
+    <span class="title-text">WEB APPS & WEB APIs</span>
     <hr>
     <div class="tag-text">
       <div>BY IAN KING</div>
     </div>
     <div class="image-box">
-      <img class="cover-image" src="images/undraw_server_status_5pbv.svg" alt=""></img>
+      <img class="cover-image" src="images/api-own-adventure-book-cover.svg" alt="Two developers sitting next to a plant, in front of a desk with a computer on top of it"></img>
     </div>
   </div>
-  <div class="content-box">
-    <h1>Introduction to APIs</h1>
+  <main>
+  <article class="article content-box">
+    <h1 id="intro">Introduction to APIs</h1>
     <p>
-      In this session, we are going to learn how to use Postman to interact with an API over HTTP.
+      In this session, we are going to:
+       <ol>
+          <li>Install Postman to interact with an API over HTTP.</li>
+          <li>Learn how to send GET and POST requests in Postman</li>
+          <li>Learn how to include a body as part of our requests</li>
+          <li>Have fun!</li>
+       </ol>
     </p>
-    <h2>Installing Postman</h2>
+    <p>
+      The API we will be using is called "API Your Own Adventure".
+    </p>
+    <hr class="inter-chapters">
+    <h1 id="installing-postman">Installing Postman</h2>
     <p>
       Postman is a REST client, it allows us to interact with an API by building HTTP requests. This is very handy when
       we are building an API, or learning how a new one works. One way to think of it is a web browser that doesn't
-      render the web page.
+      render the web page. Let's get familiar with it:
+      <ol>
+        <li>Firstly, <a target="_blank" href="https://www.postman.com/downloads/">download Postman here ↗</a></li>
+        <li>Then, get familiar with using <a target="_blank" href="https://learning.postman.com/docs/getting-started/navigating-postman/">Postman's interface here ↗</a>.</li>
+        <li>Lastly, <a target="_blank" href="https://learning.postman.com/docs/getting-started/sending-the-first-request/">send your first request ↗</a>.</li>
+      </ol>
     </p>
+    <hr class="inter-chapters">
+    <h1 id="challenge">The challenge</h2>
+    <div class="alert warning"><h3>Important! ⚠️ </h3>
+      <div>All you need for this challenge is Postman.</div>
+      <div>You <strong>don't need to clone or download</strong> the following API code locally. The link is provided only as a reference for checking the source code.</div>
+    </div>
     <p>
-      <a href="https://www.postman.com/downloads/">Download postman here.</a>
-    </p>
-    <p>
-      You can find details of the interface <a
-        href="https://learning.postman.com/docs/getting-started/navigating-postman/">here</a>. We also recommend you
-      read the next page <a href="https://learning.postman.com/docs/getting-started/sending-the-first-request/">sending
-        your first request</a>.
-    </p>
-    <h2>Challenge</h2>
-    <p>
-      We will be using this <a href="https://github.com/MCRcodes/api-your-own-adventure">api</a> to practice sending
+      We will be using the <a target="_blank" href="https://github.com/MCRcodes/api-your-own-adventure">"API Your own Adventure" API</a> to practice sending
       <code>GET</code> and <code>POST</code> requests. The aim is to explore the cave and find the treasure.
     </p>
     <p>
@@ -62,17 +74,18 @@
     </p>
     <p>
       When you're ready, send a <code>GET</code> request to
-      <code>https://api-your-own-adventure.onrender.com/location/start</code>. You should receive this <code>JSON</code>
+      <code><a href="https://api-your-own-adventure.onrender.com/location/start" target="_blank">https://api-your-own-adventure.onrender.com/location/start</a></code>. You should receive this <code>JSON</code>
       response:
     </p>
-    <code>
+    <code class="code">
       {<br>
         "text":"Welcome adventurer. Your adventure begins, as many do, in Ye Olde Inn.",<br>
         "choices":["Continue"]<br>
       }
     </code>
-    <img src="images/Screenshot 2021-04-22 at 21.19.17.png" alt="">
-    <h2>Sending your first <code>POST</code> request</h2>
+    <hr>
+    <img src="images/api-own-adventure-start.png" alt="">
+    <h1 id="first-request">Sending your first <code>POST</code> request</h2>
     <p>
       Now we have the first part of the story, we need to build a <code>POST</code> request to move the story forward.
       To do this, you will need to:
@@ -82,7 +95,7 @@
         Set the request type next to the url bar as <code>POST</code>, the url will remain the same.
       </li>
       <li>
-        Click on the <code>body</code> tab, select the <code>raw</code> option. A dropdown menu will appear to the
+        Click on the <code>Body</code> tab, select the <code>raw</code> option. A dropdown menu will appear to the
         right, it will be set to <code>Text</code> by default. Set it to <code>JSON</code>.
       </li>
       <li>
@@ -97,23 +110,38 @@
         </code>
       </li>
     </ol>
-    <img src="images/Screenshot 2021-04-22 at 21.36.04.png" alt="">
+    <img src="images/api-own-adventure-first-request.png" alt="">
     <p>
       Once that's in place you should be good to send your first <code>POST</code> request.If it worked, you'll get a
       response with a <code>goTo</code> property. This will contain the path of the next location. Hit that with a
       <code>GET</code> request to find out what's in the next location.
     </p>
-    <img src="images/Screenshot 2021-04-22 at 21.37.21.png" alt="">
+    <img src="images/api-own-adventure-progressing.png" alt="">
     <p>
       Make a <code>GET</code> request to <code>/location/inn</code> to get the next part of the story. You now have all
-      the skills you need to explore the cave an find the treasure.
+      the skills you need to explore the cave and find the treasure.
     </p>
+
+    <hr class="inter-chapters">
+    <h2 id="found-treasure">Found the treasure?</h2>
     <p>
-      When you find the treasure room, the response will include a <code>base64</code> encoded string. You can use <a
-        href="https://www.base64decode.org/">this website</a> to decode it. Be the first team to post the decoded string
+      When you find the treasure room, the response will include a <code>base64</code> encoded string. 
+    </p>
+    <p>You can use <a target="_blank" href="https://www.base64decode.org/">this website</a> to decode it. Be the first team to post the decoded string
       in slack and win the game!
     </p>
-  </div>
+  </article>
+  <aside class="sidebar content-box">
+    <h1>Table of Contents</h1>
+    <ul>
+      <li><a href="#intro">Introduction to APIs</a></li>
+      <li><a href="#installing-postman">Installing Postman</a></li>
+      <li><a href="#challenge">The challenge</a></li>
+      <li><a href="#first-request">Sending your first request</a></li>
+      <li><a href="#found-treasure">Found the treasure?</a></li>
+    </ul>
+  </aside>
+  </main>
 </body>
 
 </html>
